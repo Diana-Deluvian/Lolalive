@@ -1,6 +1,4 @@
-
-
-<script>function setCookie(cname, cvalue, exminutes) {
+function setCookie(cname, cvalue, exminutes) {
     var d = new Date();
     d.setTime(d.getTime() + (exminutes*10*1000));
     var expires = "expires="+ d.toUTCString();
@@ -34,6 +32,4 @@ function checkCookie() {
     }
 }
 
-checkCookie();</script>
-</body>
-</html>
+checkCookie();
