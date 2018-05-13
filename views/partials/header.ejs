@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Lolalive</title>
+        <title>Lilolave</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
         
@@ -12,8 +12,16 @@
     <div class='ui fixed inverted menu'>
         <div class='ui container'>
             <div class='header item'><i class="heartbeat icon"></i> Lilolave</div>
-             <a href='/' class='item'>Home</a>
-            <a href='/blogs/new' class='item'>New Post</a>
+                <a href='/' class='item'>Home</a>
+                <% if(currentUser){ %>
+                <a href='/blogs/new' class='item'>New Post</a>
+                <a href='#' class='item'><%= currentUser.username %></a>
+                <a href='/logout' class='item'>Logout</a>
+                <% } %>
+                <% if(!currentUser){ %>
+                <a href='/register' class='item'>Register</a>
+                <a href='/login' class='item'>Login</a>
+                <% } %>
         </div>
        
     </div>
