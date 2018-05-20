@@ -44,7 +44,6 @@ userSchema.plugin(passportLocalMongoose);
 var User = mongoose.model('User', userSchema);
 
 app.get('/', function(req, res){
-    console.log(req.session);
     res.redirect('/blogs');
 });
 

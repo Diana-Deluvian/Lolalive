@@ -3,25 +3,100 @@
         <title>Lilolave</title>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
         
 
     </head>
-</html>
 <body>
 
-    <div class='ui fixed inverted menu'>
-        <div class='ui container'>
-            <div class='header item'><i class="heartbeat icon"></i> Lilolave</div>
-                <a href='/' class='item'>Home</a>
-                <% if(currentUser){ %>
+    <div class='ui inverted menu fixed' id ='hifromme'>
+                        <% if(currentUser){ %>
+                <a href='/blogs/new' class='item hidething'>New Post</a>
+                <a href='#' class='item hidething'><%= currentUser.username %></a>
+                <a href='/logout' class='item hidething'>Logout</a>
+                <% } %>
+                <% if(!currentUser){ %>
+                <a href='/register' class='item hidething '>Register</a>
+                <a href='/login' class='item hidething'>Login</a>
+                <% } %>
+        <div class='ui container center aligned grid'>
+
+         <a href='/'><div class='header item borderless' id="logo"><i class="heartbeat icon"></i> Lilolave
+         </div></a>
+        </div>
+                        <% if(currentUser){ %>
                 <a href='/blogs/new' class='item'>New Post</a>
                 <a href='#' class='item'><%= currentUser.username %></a>
                 <a href='/logout' class='item'>Logout</a>
                 <% } %>
                 <% if(!currentUser){ %>
-                <a href='/register' class='item'>Register</a>
+                <a href='/register' class='item '>Register</a>
                 <a href='/login' class='item'>Login</a>
                 <% } %>
-        </div>
-       
     </div>
+    <div class="ui inverted vertical footer segment fixed" id="test">
+    <div class="ui center aligned container" id='test2'>
+                <div class="ui inverted section divider"></div>
+      <div class="ui stackable inverted divided grid">
+
+        <div class="four wide column">
+          <h4 class="ui inverted header">Navigation</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Personal</a>
+            <a href="#" class="item">Anarchism</a>
+            <a href="#" class="item">Fallacies</a>
+          </div>
+        </div>
+        <div class="four wide column">
+          <h4 class="ui inverted header">Browse</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Login</a>
+            <a href="#" class="item">Register</a>
+            <a href="#" class="item">Forgot Password</a>
+          </div>
+        </div>
+        <div class="four wide column">
+          <h4 class="ui inverted header">Other</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">FAQ</a>
+            <a href="#" class="item">Reach Out</a>
+            <a href="#" class="item">Options</a>
+          </div>
+        </div>
+        <div class="four wide column">
+          <h4 class="ui inverted header">Search</h4>
+<div class="ui left labeled input">
+      <div class="ui dropdown label">
+    <div class="text">.All</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">.com</div>
+      <div class="item">.net</div>
+      <div class="item">.org</div>
+    </div>
+  </div>
+  <input type="text">
+
+</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    </div>
+
+<style type="text/css">#test{background-color: black}</style>
+  <div class="ui sidebar inverted vertical menu" id="test">
+    <a class="item">
+      Welcome to hell
+    </a>
+    <a class="item">
+      Population:
+    </a>
+    <a class="item">
+      You.
+    </a>
+  </div>
+  <div class="pusher">
