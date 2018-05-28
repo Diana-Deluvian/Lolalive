@@ -2,6 +2,7 @@
 
 i.icon {
     font-size: 1.5em;
+    margin-left: -10px !important;
 }
 
 .container.main {
@@ -17,11 +18,11 @@ i.icon {
 	transition: overlay;
 }
 
-#logo{
+.logo{
 	font-size: 2em;
 	border-right: none;
 	color: white;
-font-family: 'Modern Antiqua';
+	font-family: 'Modern Antiqua';
 }
 
 .hidething {
@@ -33,4 +34,28 @@ font-family: 'Modern Antiqua';
 }
 
 .disappear {
+}
+
+.logo-side {
+	font-size: 1.5em;
+	  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+span {
+	padding: 10px;
+}
+
+.ui.list {
+	  display: flex !important;
+	  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.sideBarItems {
+	width: 100%;
+	padding: 15px !important;
+	text-align: center;
 }
