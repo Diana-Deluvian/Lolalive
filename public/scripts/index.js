@@ -18,3 +18,17 @@ function myFunction() {
          $('#test2').show('overlay');
     }
 }
+
+
+$(".sidebarItems").click(function(){
+    $(this).next().toggle(500);
+});
+
+$('.sidebar')
+    .sidebar({
+      dimPage: false
+      , closable: false
+    });
+
+// Toggle sidebar on button click
+/*$('.sidebar').sidebar('toggle');*/
